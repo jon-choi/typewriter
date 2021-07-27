@@ -1,10 +1,15 @@
-const sentence = 'hello there from lighthouse labs\n';
-let interval = 50;
+const sentence = 'hello there from lighthouse labs';
 
-for (const char of sentence) {
-  interval += 50;
+let time = 50;
+
+for(const char of sentence) {
+  
   setTimeout(() => {
     process.stdout.write(char);
-  }, interval);
-  
+  }, time)
+
+  time += 50;
 };
+setTimeout(() => {
+  process.stdout.write('\n');
+}, time);
